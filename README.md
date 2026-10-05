@@ -31,7 +31,7 @@ A normal menu click in PrestaShop throws the whole page away and builds it again
 - **Fetches ahead on hover.** Rest the mouse on a menu link for 60 ms and the page starts downloading. A fetched page stays usable for 60 seconds.
 - **No placeholder when it isn't needed.** The loading outline appears only if the page takes longer than 140 ms. A page fetched on hover arrives before that, so most clicks show no placeholder at all.
 - **A placeholder that fits your theme.** It measures your theme on screen and copies its colour, corner radius and proportions. It draws soft blocks where the content will go, never fake thumbnails.
-- **Smooth transitions.** Pick none, fade, fade and rise, or fade and settle (default: fade, 260 ms). Where the browser supports View Transitions, the animation runs on the GPU, so long product lists stay smooth. Anyone who asks their system for reduced motion gets no animation.
+- **Smooth transitions.** Off by default; turn on fade, fade and rise, or fade and settle (260 ms). Where the browser supports View Transitions, the animation runs on the GPU, so long product lists stay smooth. Anyone who asks their system for reduced motion gets no animation.
 - **Works with SmartPrefetch.** If [SmartPrefetch](https://github.com/mateusz-stelmasiak/Prestashop-SmartPrefetch) is installed, pages come straight from its cache and the swap is instant. InstantNav works fine without it.
 
 ## Safe by default
@@ -64,12 +64,12 @@ All in the module's configuration page, with a status panel that shows what is a
 
 | Setting | Default | What it does |
 |---|---|---|
-| Links swapped | menu links | Which links replace the page instead of reloading it |
-| Region replaced | `#wrapper` | The part of the page that is swapped; everything outside it is never touched |
+| Links swapped | main menu, desktop and phone | Which links replace the page instead of reloading it |
+| Region replaced | everything below the header | The part of the page that is swapped; everything outside it is never touched |
 | Hover delay | 60 ms | How long the mouse rests on a link before it is fetched |
 | Keep a fetched page | 60 s | How long a page fetched ahead stays usable |
 | Placeholder delay | 140 ms | Only slower pages show the loading outline |
-| Transition | Fade | None, fade, fade and rise, fade and settle |
+| Transition | None | None, fade, fade and rise, fade and settle |
 | Transition length | 260 ms | Around 250 ms reads as smooth |
 
 ## See it
